@@ -4,14 +4,8 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
 
-public class gameMenu {
-    JFrame frame;
-    JLabel highScore;
-    JLabel stage;
-    JButton start;
-    JLabel gameName;
-    JLabel credit;
-
+public class gameMenu extends Game {
+    
     public gameMenu() {
         frame = new JFrame("SPACEZ");
         frame.setLayout(null);
@@ -34,6 +28,10 @@ public class gameMenu {
         start.setBounds(280,400,150,50);
         start.setBackground(new Color(255, 102, 0)); start.setForeground(new Color(0, 0, 0));
 
-        frame.add(gameName); frame.add(start);
+        highScore = new JLabel("");
+        // highScore.setBounds
+
+
+        frame.add(gameName); frame.add(start); frame.add(highScore);
     }
 }

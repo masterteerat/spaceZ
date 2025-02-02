@@ -10,7 +10,7 @@ public class Game {
         frame.setSize(720, 1000);
         frame.getContentPane().setBackground(Color.BLACK);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        frame.setFocusable(true);
         new gameMenu(frame);
         frame.setVisible(true);
     }

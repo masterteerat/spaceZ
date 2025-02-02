@@ -15,12 +15,10 @@ public class InGame {
     JLabel bullet;
 
     public InGame(JFrame frame) {
-        ImageIcon playIco = new ImageIcon(getClass().getResource("/Players/player1.png"));
+        ImageIcon playIco = new ImageIcon(getClass().getResource("/Players/Player1.png"));
         player = new JLabel(playIco);
         player.setBounds(280, 840, playIco.getIconWidth(), playIco.getIconHeight());
         frame.add(player);
-        frame.setFocusable(true);
-        frame.requestFocusInWindow();
         playerMove(frame, playIco);
     }
     private void playerMove(JFrame frame, ImageIcon playerIcon) {

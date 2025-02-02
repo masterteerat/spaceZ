@@ -3,7 +3,6 @@ import javax.swing.JFrame;
 
 public class Game {
     private JFrame frame;
-
     public Game() {
         frame = new JFrame("SPACEZ");
         frame.setLayout(null);
@@ -12,7 +11,7 @@ public class Game {
         frame.getContentPane().setBackground(Color.BLACK);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        gameMenu menu = new gameMenu(frame);
+        new gameMenu(frame);
         frame.setVisible(true);
     }
 

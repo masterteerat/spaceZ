@@ -1,18 +1,22 @@
-import javax.swing.JButton;
+import java.awt.Color;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class Game {
-    JFrame frame;
-    JLabel highScore;
-    JLabel stage;
-    JButton start;
-    JLabel gameName;
-    JLabel credit;
-}
+    private JFrame frame;
 
-class Run {
+    public Game() {
+        frame = new JFrame("SPACEZ");
+        frame.setLayout(null);
+        frame.setResizable(false);
+        frame.setSize(720, 1000);
+        frame.getContentPane().setBackground(Color.BLACK);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        gameMenu menu = new gameMenu(frame);
+        frame.setVisible(true);
+    }
+
     public static void main(String[] args) {
-        gameMenu Run = new gameMenu();
+        new Game();
     }
 }

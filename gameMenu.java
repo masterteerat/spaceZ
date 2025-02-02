@@ -1,24 +1,19 @@
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JFrame;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class gameMenu extends Game {
-    
-    public gameMenu() {
-        frame = new JFrame("SPACEZ");
-        frame.setLayout(null);
-        frame.setResizable(false);
-        frame.setSize(720,1000);
-        frame.getContentPane().setBackground(Color.BLACK);
+public class gameMenu {
+    protected JLabel highScore;
+    JLabel stage;
+    JButton start;
+    JLabel gameName;
+    JLabel credit;
 
-        setElement();
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
-    private void setElement() {
+    public gameMenu(JFrame frame) {
         gameName = new JLabel("SPACEZ");
         gameName.setBounds(130,100,600,70);
         gameName.setFont(new Font("SpaceX", Font.BOLD, 72));
@@ -31,7 +26,17 @@ public class gameMenu extends Game {
         highScore = new JLabel("");
         // highScore.setBounds
 
-
+        start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll();
+                frame.getContentPane().setBackground(Color.BLACK);
+                frame.revalidate();
+                frame.repaint();
+                new InGame(frame);
+            }
+        });
         frame.add(gameName); frame.add(start); frame.add(highScore);
+        frame.setVisible(true);
     }
 }

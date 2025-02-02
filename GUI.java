@@ -11,8 +11,8 @@ public class GUI {
         frame.getContentPane().setBackground(Color.BLACK);
 
         JLabel gameName = new JLabel("SPACEZ");
-        gameName.setBounds(210,100,300,70);
-        gameName.setFont(new Font("Arial", Font.BOLD, 72));
+        gameName.setBounds(130,100,600,70);
+        gameName.setFont(new Font("SpaceX", Font.BOLD, 72));
 
         JButton button = new JButton("Start!!!!");
         button.setBounds(280,400,150,50);

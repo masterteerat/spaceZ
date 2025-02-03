@@ -8,10 +8,12 @@ import java.awt.event.ActionEvent;
 
 public class gameMenu {
     protected JLabel highScore;
+    protected int intScore;
     JLabel stage;
     JButton start;
     JLabel gameName;
     JLabel credit;
+    
 
     public gameMenu(JFrame frame) {
         gameName = new JLabel("SPACEZ");
@@ -20,11 +22,13 @@ public class gameMenu {
         gameName.setForeground(new Color(0, 255, 255));
 
         start = new JButton("Start!!!!");
-        start.setBounds(280,400,150,50);
+        start.setBounds(280,325,150,50);
         start.setBackground(new Color(255, 102, 0)); start.setForeground(new Color(0, 0, 0));
 
-        highScore = new JLabel("");
-        // highScore.setBounds
+        highScore = new JLabel("High Score : " + intScore);
+        highScore.setBounds(200, 35, 800, 40);
+        highScore.setFont(new Font("SpaceX",Font.PLAIN,24));
+        highScore.setForeground(Color.WHITE);
 
         start.addActionListener(new ActionListener() {
             @Override

@@ -17,7 +17,7 @@ public class InGame {
     public InGame(JFrame frame) {
         ImageIcon playIco = new ImageIcon(getClass().getResource("/Players/Player1.png"));
         player = new JLabel(playIco);
-        player.setBounds(280, 840, playIco.getIconWidth(), playIco.getIconHeight());
+        player.setBounds(280, 680, playIco.getIconWidth(), playIco.getIconHeight());
         frame.add(player);
         playerMove(frame, playIco);
     }

@@ -7,7 +7,7 @@ public class Game {
         frame = new JFrame("SPACEZ");
         frame.setLayout(null);
         frame.setResizable(false);
-        frame.setSize(720, 1000);
+        frame.setSize(720, 840);
         frame.getContentPane().setBackground(Color.BLACK);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setFocusable(true);
